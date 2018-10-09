@@ -1,231 +1,188 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Plasmati Graduate CV
-% LaTeX Template
-% Version 1.0 (24/3/13)
+% resume.tex
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2014 Todd C. Miller <Todd.Miller@sudo.ws> http://www.sudo.ws/todd
 %
-% Original author:
-% Alessandro Plasmati (alessandro.plasmati@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template needs to be compiled with XeLaTeX.
-% The main document font is called Fontin and can be downloaded for free
-% from here: http://www.exljbris.com/fontin.html
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
 
-\documentclass[a4paper,10pt]{article} % Default font size and paper size
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\usepackage{fontspec} % For loading fonts
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
 
-\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
 
-\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
-
-\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
-% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
-
-\usepackage{hyperref} % Required for adding links	and customizing them
-\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
-
-\usepackage{titlesec} % Used to customize the \section command
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
 \begin{document}
 
-\pagestyle{empty} % Removes page numbering
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Todd C. Miller}  & 720.938.2132 (cell)\\
+1890 Tansy Place &  Todd.Miller@sudo.ws \\
+Boulder, CO  80304& http://www.sudo.ws/todd\\
+\end{tabular*}
+\\
 
-\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+\vspace{0.1in}
 
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{University of Colorado}{Boulder, CO}{Bachelor of Science in Computer Science}{Sep. 1989 - Dec. 1997}
+	\begin{itemize}
+		\resitem{Senior Thesis: Scientific Visualization Tool for Chemical Engineering Data}
+	\end{itemize}
 
-\par{\centering{\Huge John \textsc{Smith}}\bigskip\par} % Your name
+\end{itemize}
 
-\section{Personal Data}
+\resheading{Work Experience}
+\begin{itemize}
+\item
+	\ressubheading{Quest Software, Inc.}{Lindon, UT}{Software Developer Senior Engineer}{September 2012 - Present}
+	\begin{itemize}
+		\resitem{Added support for mulitple platforms to the password escrow component of the \emph{One Identity} Identity and Access Management suite.}
+		\resitem{Part of a team designing the Unix Privilege Management component of the \emph{One Identity} Identity and Access Management suite.}
+		\resitem{Implemented support for forwarding Unix domain sockets in OpenSSH and merged the changes upstream.}
+		\resitem{Continue to develop and maintain \emph{Sudo} and make regular releases.}
+	\end{itemize}
+	\ressubheading{Quest Software, Inc.}{Lindon, UT}{Software Developer 4}{May 2010 - September 2012}
+	\begin{itemize}
+		\resitem{Added support for I/O (keystroke) logging to the \emph{Sudo} privilege delegation utility and implemented a utility to search and replay the I/O logs.}
+		\resitem{Designed and implemented a plugin architecture for the \emph{Sudo} privilege delegation utility to support third-party policy and logging modules.}
+		\resitem{Added support for sudoers policy evaluation to the Quest Privilege Manager product.}
+		\resitem{Responsibilities also included development and maintenance of \emph{Sudo} including release engineering and defect management.}
+	\end{itemize}
+\item
+	\ressubheading{Message Systems, Inc.}{Columbia, MD}{Lead Software Engineer}{August 2009 - April 2010}
+	\begin{itemize}
+		\resitem{Team lead for the Momentum mail transport agent project.}
+		\resitem{Responsibilities include design, development and testing of the MTA, as well as release engineering, mentoring of other team members and interfacing with support staff.}
+	\end{itemize}
+	\ressubheading{Message Systems, Inc.}{Columbia, MD}{Email Infrastructure Software Engineer}{March 2008 - August 2009}
+	\begin{itemize}
+		\resitem{Part of a small team developing the Momentum mail transport agent.}
+		\resitem{Responsibilities include general development and testing of the MTA as well as release engineering.}
+	\end{itemize}
 
-\begin{tabular}{rl}
-\textsc{Place and Date of Birth:} & Canada  | 20 November 1987 \\
-\textsc{Address:} & 123 Broadway, City, State, Canada \\
-\textsc{Phone:} & +1 111 1112\\
-\textsc{email:} & \href{mailto:john@smith.com}{john@smith.com}
-\end{tabular}
+\item
+	\ressubheading{Tresys Technology, LLC.}{Columbia, MD}{Principal Engineer}{May 2007 - March 2008}
+	\begin{itemize}
+		\resitem{Principal Engineer of the Funded Research \& Development team.}
+		\resitem{Responsible for oversight of multiple projects within the FR\&D group, which specializes in researching techniques to increase the usability of Security Enhanced Linux (SELinux).}
+		\resitem{Provide technical oversight and guidance for research tasks.}
+	\end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE 
-%----------------------------------------------------------------------------------------
+\pagebreak
 
-\section{Work Experience}
+\item
+	\ressubheading{SPARTA, Inc.}{Columbia, MD}{Principal Engineer}{Sep. 2005 - Mar. 2007}
+	\begin{itemize}
+		\resitem{Led a small team of developers responsible for the production of a security-enhanced version of Apple's Mac OS X operating system, utilizing type enforcement and mandatory access controls.}
+		\resitem{Extended the SELinux FLASK architecture to secure Mach inter-process communication as present in Mac OS X.}
+		\resitem{Extended and enhanced the TrustedBSD MAC Framework for the Darwin kernel, portions of which appear in Mac OS 10.5 (Leopard).}
+	\end{itemize}
 
-\begin{tabular}{r|p{11cm}}
-\emph{Current} & 1\textsuperscript{st} year Analyst at \textsc{Lehman Brothers}, London \\
-\textsc{Mar 2012} & \emph{Commodities Structured Trading}\\ 
-& \footnotesize{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (\textit{ags, oils, precious} and \textit{base metals}), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}\\
-\multicolumn{2}{c}{} \\
+\item
+	\ressubheading{Looking Glass Systems, LLC.}{Boulder, CO}{Senior Programmer and System Administrator}{Feb. 2005 - Sep. 2005}
+	\begin{itemize}
+		\resitem{Served as part of a team to design and develop an agent-based monitoring system for Windows and {\sc UNIX} systems.}
+		\resitem{Responsible for the design and implementation of an agent for UNIX-like systems that interoperates with the LG Vision server software.}
+		\resitem{Was also responsible for the installation and maintenance of network and computing resources.}
+	\end{itemize}
 
-%------------------------------------------------
+\item
+	\ressubheading{GratiSoft, Inc.}{Boulder, CO}{Founder}{Oct. 2003 - Feb. 2005}
+	\begin{itemize}
+		\resitem{GratiSoft provided commercial support for the \emph{Sudo} root privilege control package as well as consulting services for OpenBSD and other Open Source software.}
+		\resitem{Rewrote the sudoers file parser to address long-standing limitations.}
+		\resitem{Made regular releases of \emph{Sudo} with bug fixes and new features.}
+		% XXX - more detail here too
+	\end{itemize}
 
-\textsc{Jul 2010-Oct 2011} & Summer Intern at \textsc{Intech Inc}, Chicago \emph{}\\
-& \footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}\\
-\multicolumn{2}{c}{} \\
+\item
+	\ressubheading{Distributed Systems Lab, University of Pennsylvania}{Philadelphia, PA}{Sr. Systems Programmer}{Dec. 2001 - Oct. 2003}
+	\begin{itemize}
+		\resitem{Added KeyNote trust-management support to the Apache web server.}
+		\resitem{Continued to enhance the OpenBSD operating system on a daily basis.}
+		% XXX - list some OpenBSD things I worked on
+	\end{itemize}
 
-%------------------------------------------------
+\item
+	\ressubheading{Computer Science Operations Group, University of Colorado}{Boulder, CO}{Sr. System Administrator}{Oct. 1993 - Dec. 2001}
+	\begin{itemize}
+		\resitem{One of three full-time {\sc UNIX} system and network administrators in charge of the {\sc UNIX} computing resources for the Computer Science Department.}
+		\resitem{Managed a network of approximately 350 {\sc UNIX} workstations and X-terminals located in undergraduate, masters, and research labs as well as in faculty offices.}
+		\resitem{Responsible for day-to-day operation of department-wide computer resources and computer support.}
+		%Put more stuff back?
+	\end{itemize}
 
-\textsc{Jan-Mar 2011} & Computer Technician at \textsc{Buy More}, Burbank \emph{}\\
-& \footnotesize{Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again.}
-\end{tabular}
+\end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
+\resheading{Skills}
 
-\section{Education}
+\begin{description}
+\item[Languages:]
+C/C{}\verb!++!, C{}\verb!#!, Perl, Java, Unix Shell, Sed, Awk
+\item[Operating Systems:]
+Linux, OpenBSD, FreeBSD, Mac OS X, {\sc UNIX}
+\item[Security:]
+Extensive experience writing secure code and auditing code for security-related errors
+\item[Miscellaneous:]
+Excellent troubleshooting and debugging skills
+\end{description}
 
-\begin{tabular}{rl}	
-\textsc{July} 2012 & Master of Commerce in \textsc{Finance}, \textbf{The University of California}, Berkeley\\
-& 110/110 \small\emph{First Class Honours} | Major: Quantitative Finance\\
-& Thesis: ``Money is the Root of All Evil - Or is it?'' | \small Advisor: Prof. James \textsc{Smith}\\
-&\normalsize \textsc{Gpa}: 8.0/9.0\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\
-&\\
+\resheading{Open Source Projects}
 
-%------------------------------------------------
+\begin{description}
+\item[2007--2008] One of four upstream maintainers of the SELinux tool chain.
+\item[2001--Present] Major contributor to ISC cron (formerly Vixie cron).
+\item[1996--Present] Core member of the OpenBSD operating system project.  Participated in multiple security audits of the OpenBSD code base.  Responsible for the OpenBSD C library and large portions of the OpenBSD user space.
+\item[1993--Present] Lead developer of the \emph{Sudo} root privilege control package.
+\item[1993--Present] Contributor to other various and sundry Open Source projects.
+\end{description}
 
-\textsc{July} 2011& Undergraduate Degree in \textsc{}\textsc{Business Studies} \\&110/110 \small\emph{Commerce Specialization}, \normalsize\textbf{The University of California}, Berkeley\\
-& Heavily specialized in mundane paperwork | \small Advisor: Stefano \textsc{Bonini}\\
-&\normalsize \textsc{Gpa}: 7.5/9.0 \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}\\
-&\\
+\pagebreak
 
-%------------------------------------------------
+\resheading{Publications}
 
-\textsc{Fall} 2008 & Exchange Semester at \textbf{University of Southern California}, Los Angeles\\
-& \textsc{Gpa}: 8.0/9.0 \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}\\
-&\\
+\begin{description}
+\item["Security-Enhanced Darwin: Porting SELinux to Mac OS X",]
+\emph{Proceedings from the Third Annual Security Enhanced Linux Symposium} in Baltimore, MD, 2007.
+\item["{\sc \bf UNIX} System Administration Handbook, Third Edition",]
+contributing author.
+\item["strlcpy and strlcat:  Consistent, Safe, String Copy and Concatenation",]
+\emph{Proceedings from the USENIX Annual Technical Conference} in Monterey, CA, 1999.
+\item["satool:  A System Administrators Cockpit",]
+\emph{Proceedings from the USENIX LISA VII Conference (Large Installation Systems Administration)} in Monterey, CA, 1993.
+\end{description}
 
-%------------------------------------------------
+\resheading{Patents}
 
-\textsc{July} 2006& \textbf{Liceo Classico ``E. Duni''}, Matera | Final Grade: 100/100
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	SCHOLARSHIPS AND ADDITIONAL INFO
-%----------------------------------------------------------------------------------------
-
-\section{Scholarships and Certificates}
-
-\begin{tabular}{rl}
-\textsc{Sept.} 2012 & Faculty of Science Masters Scholarship \footnotesize(\$30,000)\normalsize\\
-
-\textsc{June} 2010 & {\textsc{Gmat}\textregistered}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}: 730 (\textsc{q:50;v:39}) 96\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile)
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES
-%----------------------------------------------------------------------------------------
-
-\section{Languages}
-
-\begin{tabular}{rl}
-\textsc{English:} & Fluent\\
-
-\textsc{Italian:} & Mothertongue\\
-
-\textsc{French:} & Basic Knowledge\\
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS 
-%----------------------------------------------------------------------------------------
-
-\section{Computer Skills}
-
-\begin{tabular}{rl}
-Basic Knowledge: & \textsc{php}, my\textsc{sql}, \textsc{html}, Access, \textsc{Linux}, ubuntu, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
-
-Intermediate Knowledge: & \textsc{vba}, Excel, Word, PowerPoint\\
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS AND ACTIVITIES
-%----------------------------------------------------------------------------------------
-
-\section{Interests and Activities}
-
-Technology, Open-Source, Programming\\
-Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
-Football, Travelling
-
-%----------------------------------------------------------------------------------------
-
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	GRADE TABLES
-%----------------------------------------------------------------------------------------
-
-\par{\centering\Large \hypertarget{grds}{Master of Science in \textsc{Finance}}\par}\large{\centering Grades\par}\normalsize
-
-\begin{center}
-\begin{tabular}{lcc}
-\multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade}&\textsc{Credit Hrs}\\ \hline
-Corporate Finance (Valuation) & 25 & 6\\
-Financial Statement Analysis & 28 & 6\\
-Statistics & 27 & 6\\
-Theory of Finance & 26 & 6\\
-Quantitative Methods for Finance & 30 & 6\\
-Econometrics & 24 & 6\\
-Derivatives & 31 & 6\\
-Management of Financial and Insurance Companies & 30 & 6\\
-Business Law & 31 & 6\\
-Investment Banking	& 28 & 6\\ \\		
-Behavioral Models for Economics and Finance	 & 29 & 6\\
-Numerical Methods for Finance & 29 & 6\\
-Advanced Derivatives & 30 & 6\\
-Fixed Income (Advanced Methods) & 30 & 6\\ \\
-English Language & 30 &	4\\
-French Language & 31 &	4\\	
-Internship & & 8\\		
-Final Thesis & & 20\\	
-& Total & 120\\\cline{2-3}
-&\textsc{Gpa}&\textbf{8.0}
-\end{tabular}
-\end{center}
-\bigskip
-\hrule
-\bigskip
-
-%------------------------------------------------
-
-\bigskip
-
-\par{\centering\Large \hypertarget{grds_usc}{Exchange Program at \textsc{usc}, Los Angeles}\par}\large{\centering Grades\par}\normalsize
-
-\begin{center}
-\begin{tabular}{lcc}
-\multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade} & \textsc{Grade Points}\\ 
-\hline
-Corporate Financial Strategy & A & 4\\
-Derivatives & A & 4\\
-Money, Credit, and Banking & A & 4\\
-Business Strategy & A- & 3.5\\
-& &\\\cline{2-3}
-& \textsc{Gpa} & \textbf{3.875}
-\end{tabular}
-\end{center}
-
-%----------------------------------------------------------------------------------------
+\begin{description}
+\item[Furlong, Wesley J., Schlossnagle, George, Miller, Todd.  2014.]
+Method and system for adaptive delivery of digital messages.
+U.S. Patent 8,782,184 filed September 20, 2013, and issued July 15, 2014.
+\end{description}
 
 \end{document}
