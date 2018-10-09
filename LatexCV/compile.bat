@@ -1,1 +1,1 @@
-xelatex resume.tex
+pdflatex resume.tex
