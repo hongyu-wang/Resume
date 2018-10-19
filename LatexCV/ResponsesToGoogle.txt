@@ -1,0 +1,15 @@
+#Technologies
+
+Proficient Languages:
+I am familiar with most front end technologies such as ReactJS, AngularJS. I also have strong knowledge of server side technologies such as NodeJS, Python, and Java as well as some familiarity with dependency injection frameworks such as SpringBoot.
+
+Participation in Major Programming Projects:
+I have worked in a internship 
+
+Some other stuff about me
+I have worked as a project lead in our school project course.
+
+
+#Interests
+
+
