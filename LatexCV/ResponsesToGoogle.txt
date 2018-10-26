@@ -1,3 +1,6 @@
+Additional skills
+[Optional, but strongly encouraged] Is there additional information about your technical abilities that could help us match you to a project? e.g., Are you proficient in multiple programming languages? Have you received awards, built an exciting system or application, acted as a project lead in your coursework, made open source contributions or participated in major programming projects? (2000 chars max)
+
 #Technologies
 
 Proficient Languages:
@@ -10,6 +13,8 @@ Some other stuff about me
 I have worked as a project lead in our school project course.
 
 
+
+Additional preferences
+[Optional, but strongly encouraged] Is there anything else you would like us to know about your preferences? e.g., What kind of projects excite you? Do you have a favorite Google product or know of a specific Google team that might be a good fit for your interests? Is there an area/discipline that you really want to learn? (2000 chars max)
+
 #Interests
-
-

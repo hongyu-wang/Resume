@@ -1,3 +1,3 @@
 Worked on a customer facing feature for the Toronto Master Data Management product. Implemented support for multi-language login authentication using both Java and Javascript Created several batch scripts to automate workﬂow, reducing deployment time by 25%. Designed an end to end automation framework using Puppeteer. Experience in an agile work environment.
 
-Designed a system to create psychology experiments using C#. Used a linked-list to not require global state. This allowed multiple entry points into each trial. Implemented procedural generation of trial environments. Implemented a feature which allowed endusers to design trial workﬂow using reﬂection.
+Designed a system to create psychology experiments using C#. Used a linked-list to not require global state. This allowed multiple entry points into each trial. Implemented procedural generation of trial environments. Created a feature which allowed endusers to design trial workﬂow using reﬂection.
